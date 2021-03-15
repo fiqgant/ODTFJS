@@ -5,13 +5,6 @@ import Webcam from "react-webcam";
 import "./App.css";
 import { drawRect } from "./utilities";
 
-flipCamera = () => {
-        navigator.mediaDevices
-            .getUserMedia(constraints)
-            .then(stream => stream.getTracks().forEach(track => track.stop()))
-            .then(() => this.setState(prevState => ({ isFacingMode: !prevState.isFacingMode })));
-    };
-
 function App() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
